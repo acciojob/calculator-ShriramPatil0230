@@ -1,41 +1,51 @@
 .calculator {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-gap: 5px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 50px;
 }
 
-/* CSS for calculator buttons */
-.calculator button {
-    grid-column: span 1;
-    grid-row: span 1;
-    background-color: #f2f2f2;
-    color: black;
-    font-size: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.display {
+  grid-column: 1 / -1;
+  padding: 10px;
+  text-align: right;
+  font-size: 2em;
+  background-color: #ccc;
 }
 
-.calculator button:hover {
-    background-color: #e6e6e6;
+.btn {
+  padding: 10px;
+  font-size: 1.5em;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
 }
 
-/* CSS for calculator display */
-.calculator input[type=text] {
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 1;
-    background-color: #f2f2f2;
-    color: black;
-    font-size: 40px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    text-align: right;
+.btn:hover {
+  background-color: #666;
+}
+
+#back {
+  font-size: 2em;
+}
+
+#clear {
+  background-color: #f44336;
+}
+
+#equal {
+  background-color: #4caf50;
+  grid-row: span 2;
+}
+
+#decimal {
+  font-size: 2em;
+}
+
+#op, #cl {
+  font-size: 1.8em;
 }
